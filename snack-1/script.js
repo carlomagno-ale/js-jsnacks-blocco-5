@@ -15,7 +15,7 @@ for (let i = 0; i< names.length; i++){
 names.forEach(getNames)
 
 function getNames(name){
-    console.log(name)
+console.log(name)
 }
 
 //3
