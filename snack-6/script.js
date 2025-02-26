@@ -17,11 +17,11 @@ const zucchine = [
 const longZucchine = []
 const otherZucchine = []
 
-for(let i = 0; i < zucchine.length; i++){
+for (let i = 0; i < zucchine.length; i++) {
   const lengthZucchine = zucchine[i].length
-  if(lengthZucchine >= '15'){
+  if (lengthZucchine >= '15') {
     longZucchine.push(zucchine[i])
-  }else{
+  } else {
     otherZucchine.push(zucchine[i])
   }
 }
@@ -32,7 +32,7 @@ console.log(otherZucchine)
 //2
 const bigZucc = zucchine.filter(checkBig)
 
-function checkBig(zucc){
+function checkBig(zucc) {
   return zucc.length >= 15
 }
 
@@ -40,9 +40,23 @@ console.log(bigZucc)
 
 const smallZucc = zucchine.filter(checkSmall)
 
-function checkSmall(zucc){
+function checkSmall(zucc) {
   return zucc.length < 15
 }
 
 console.log(smallZucc)
 
+//3
+const zuccBig = []
+const zuccSmall = []
+
+zucchine.filter((zucc) => {
+  if (zucc.length >= 15) {
+    zuccBig.push(zucc)
+  } else {
+    zuccSmall.push(zucc)
+  }
+})
+
+console.log(zuccBig)
+console.log(zuccSmall)
